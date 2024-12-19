@@ -20,9 +20,3 @@ int query(int s, int e, int node = 1, int ns = 0, int ne = sz - 1) {
     int mid = ns + ne >> 1;
     return query(s, e, node << 1, ns, mid) + query(s, e, node << 1 | 1, mid + 1, ne);
 }
-
-int main() {
-    for (int i = 0; i < 100; i++) update(i, i + 1);
-
-    cout << query(1, 5);
-}
