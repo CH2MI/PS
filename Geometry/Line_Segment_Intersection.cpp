@@ -10,6 +10,7 @@ int CCW(point& a, point& b, point& c) {
     return 0;
 }
 
+// If the line segments ab and cd intersect, it returns true.
 bool intersect(point& a, point& b, point& c, point& d) {
     int ab = CCW(a, b, c) * CCW(a, b, d);
     int cd = CCW(c, d, a) * CCW(c, d, b);
